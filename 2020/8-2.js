@@ -1,5 +1,5 @@
 var l = document.body.innerText.trim().split('\n')
-var altered = new Map(), found = false, flipped = false
+var altered = new Map(), found = false
 do {
   var visited = new Map(), acc = 0, flipped = false
   for (var i = 0; i < l.length; i++) {
