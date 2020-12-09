@@ -1,7 +1,7 @@
 var l = document.body.innerText.trim().split('\n')
 var altered = new Map(), found = false, flipped = false
 do {
-  var visited = new Map(), acc = 0
+  var visited = new Map(), acc = 0, flipped = false
   for (var i = 0; i < l.length; i++) {
     if (visited.get(i) == true) break
     visited.set(i, true)
@@ -31,6 +31,5 @@ do {
     }
   }
   if (i >= l.length) found = true
-  flipped = false
 } while (found == false)
 console.log(acc)
