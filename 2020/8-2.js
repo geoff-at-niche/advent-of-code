@@ -1,16 +1,16 @@
-var l = document.body.innerText.trim().split('\n')
-var altered = new Map(), found = false
+let l = document.body.innerText.trim().split('\n')
+let altered = new Map(), found = false
 do {
-  var visited = new Map(), acc = 0, flipped = false
-  for (var i = 0; i < l.length; i++) {
+  let visited = new Map(), acc = 0, flipped = false
+  for (let i = 0; i < l.length; i++) {
     if (visited.get(i) == true) break
     visited.set(i, true)
-    var x = l[i].split(' ')
-    var cmd = x[0], n = Number(x[1])
+    let x = l[i].split(' ')
+    let cmd = x[0], n = Number(x[1])
     if (cmd == 'acc') acc += n
     else if (cmd == 'jmp') {
       if (!flipped) {
-        var x = altered.get(i)
+        let x = altered.get(i)
         if (!x) {
           altered.set(i, true)
           flipped = true
@@ -21,7 +21,7 @@ do {
     }
     else if (cmd == 'nop') {
       if (!flipped) {
-        var x = altered.get(i)
+        let x = altered.get(i)
         if (!x) {
           altered.set(i, true)
           flipped = true
