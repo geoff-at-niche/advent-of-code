@@ -1,4 +1,4 @@
-varl = document.body.innerText.trim().split('\n')
+var l = document.body.innerText.trim().split('\n')
 var w = [], pa = 25
 for (var i = 0; i < l.length; i++) {
   if (w.length < pa) {
@@ -8,8 +8,9 @@ for (var i = 0; i < l.length; i++) {
   var target = Number(l[i]), found = false
   for (var j = 0; j < w.length; j++) {
 	  for (var k = 0; k < w.length, k != j; k++) {
-		  if (w[j] + w[k] == target) found = true
+		  if (w[j] + w[k] == target) { found = true; break; }
 	  }
+      if (found) break;
   }
   if (!found) break
   w.shift()
