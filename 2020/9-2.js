@@ -1,4 +1,4 @@
-var l = document.body.innerText.trim().split('\n')//
+var l = document.body.innerText.trim().split('\n')
 var target = '[YOUR_PART1_ANSWER_HERE]' //Mine: 90433990
 var a = [], s = 0, found = false
 for (var i = 0; i < l.length; i++) {
